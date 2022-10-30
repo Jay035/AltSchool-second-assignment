@@ -13,15 +13,13 @@ export default function Users() {
   const pagesVisiited = pageNumber * usersPerPage;
   const pageCount = userData && Math.ceil(userData.length / usersPerPage);
   const changePage = ({ selected }) => {
-    setTimeout(() => {
-      setLoading(true);
-    }, 1000);
-    setLoading(false);
+    setLoading(true);
     setPageNumber(selected);
+    setLoading(false);
   };
 
   const displayUsers =
-    userData &&
+    !loading &&
     userData.slice(pagesVisiited, pagesVisiited + usersPerPage).map((user) => {
       const dob = new Date(user.dob.date).toLocaleDateString();
       return (
@@ -29,15 +27,16 @@ export default function Users() {
           <img src={user.picture.large} alt="user img" />
           <div className="user-details">
             <div className="name">
-              <p className="title">Name:</p>
+              {/* <p className="title">Name:</p> */}
               <p className="value">
                 {user.name.title} {user.name.first} {user.name.last}
               </p>
+              <button>See More</button>
             </div>
-            <div className="email">
+            {/* <div className="email">
               <p className="title">Email:</p>
               <p className="value">{user.email}</p>
-            </div>
+            </div> */}
             {/* <div className="phone">
               <p className="title">Phone:</p>
               <p className="value">{user.phone}</p>
@@ -67,7 +66,7 @@ export default function Users() {
     });
 
   useEffect(() => {
-    fetch("https://randomuser.me/api/?results=70")
+    fetch("https://randomuser.me/api/?results=100")
       .then((res) => res.json())
       .then((data) => {
         setUserData(data.results);
@@ -85,7 +84,8 @@ export default function Users() {
 
           <ReactPaginate
             breakLabel="..."
-            pageRangeDisplayed={3}
+            pageRangeDisplayed={1}
+            renderOnZeroPageCount={null}
             previousLabel={"Previous"}
             nextLabel={"Next"}
             pageCount={pageCount}
