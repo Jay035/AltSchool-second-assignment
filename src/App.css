@@ -160,6 +160,14 @@ nav {
   padding: 10px;
   border-radius: 5px;
   width: 130px;
+  transition: all ease .3s;
+  cursor: pointer;
+}
+
+.card button:hover{
+  background-color: #e7e7e7;
+  color: #14213d;
+  border: 1px solid #14213d;
 }
 
 .paginationBtns{
@@ -195,6 +203,7 @@ nav {
   border-radius: 5px;
   border: 1px solid #14213d;
   color: #14213d;
+  transition: all ease .3s;
   cursor: pointer;
 }
 
