@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import closeBtn from './closeBtn.svg';
 
 export default function Navbar() {
   const [menuState, setMenuState] = useState(false);
@@ -23,7 +24,7 @@ export default function Navbar() {
           className="close-btn cursor-pointer"
           onClick={() => setMenuState((prevState) => !prevState)}
         >
-          X
+          <img src={closeBtn} alt="close button" />
         </div>
         {/* menu */}
         <ul className="menu">
