@@ -218,6 +218,46 @@ nav {
 }
 
 
+/* error page */
+.error-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  /* margin-top: 7rem; */
+}
+
+.error-page .content{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.error-page .page-not-found-text{
+  background-color: #14213da4;
+  color: #fff;
+  width: fit-content;
+  /* margin-bottom: 10px; */
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.error-page a{
+  text-decoration: none;
+  background-color: #14213d;
+  padding: 10px 15px;
+  width: fit-content;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Sora', sans-serif;
+}
+
+.error-page img{
+  width: 20rem;
+}
+
 
 @media (min-width: 768px){
   .hamburger{
@@ -248,7 +288,7 @@ nav {
   }
 
   .menu a{
-    color: #5c4742;
+    color: #14213d;
   }
 
   .users-page{
@@ -256,14 +296,15 @@ nav {
   }
 
   .card img{
-    width: 10rem;
+    width: 8rem;
   }
 
 }
 
 @media (min-width: 1000px){
   .users-page{
-    grid-template-columns: repeat(2, 60%);
-    max-width: 1000px;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    max-width: 1200px;
   }
 }

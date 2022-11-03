@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
+import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Users from './components/Users';
-import About from './components/About';
-import ErrorPage from './components/ErrorPage';
+import About from './pages/About';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
   return (
