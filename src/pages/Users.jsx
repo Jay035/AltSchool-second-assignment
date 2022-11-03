@@ -1,7 +1,9 @@
-import Axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
+import Loading from "../components/Loading";
+import Navbar from "../components/Navbar";
+import UserDetails from "../components/UserDetails";
 
 export default function Users() {
   const [userData, setUserData] = useState("");
@@ -66,7 +68,7 @@ export default function Users() {
     });
 
   useEffect(() => {
-    fetch("https://randomuser.me/api/?results=100")
+    fetch("https://randomuser.me/api/?results=50")
       .then((res) => res.json())
       .then((data) => {
         setUserData(data.results);
@@ -76,11 +78,12 @@ export default function Users() {
   }, []);
 
   return (
-    <div className="container">
-      {loading && <div className="">Loading....</div>}
+    <div className="">
+      {loading && <Loading />}
       {!loading && (
         <>
-          <div className="users-page">{displayUsers}</div>
+         <Navbar />
+         <UserDetails displayUsers={displayUsers} />
 
           <ReactPaginate
             breakLabel="..."

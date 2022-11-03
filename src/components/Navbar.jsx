@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <h1>Project-name</h1>
+      <h1>AltSchool-task</h1>
       {/* hamburger */}
       <div
         className="hamburger cursor-pointer"
