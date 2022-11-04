@@ -12,7 +12,7 @@ export default function Users() {
   const [pageNumber, setPageNumber] = useState(0);
 
   const usersPerPage = 10;
-  const pagesVisiited = pageNumber * usersPerPage;
+  const pagesVisited = pageNumber * usersPerPage;
   const pageCount = userData && Math.ceil(userData.length / usersPerPage);
   const changePage = ({ selected }) => {
     setLoading(true);
@@ -22,7 +22,7 @@ export default function Users() {
 
   const displayUsers =
     !loading &&
-    userData.slice(pagesVisiited, pagesVisiited + usersPerPage).map((user) => {
+    userData.slice(pagesVisited, pagesVisited + usersPerPage).map((user) => {
       const dob = new Date(user.dob.date).toLocaleDateString();
       return (
         <div key={user.email} className="card">
