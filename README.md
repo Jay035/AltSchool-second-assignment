@@ -2,9 +2,11 @@
 
 [Click here to view the live site](https://random-users-api-altschool-assignment.vercel.app/)
 
-## Screenshot
+### Screenshot
 
-![Design preview for the linktree project](./src/assets/Project-screenshot.png)
+![Home page for the random users API project ](./src/project-screenshot1.jpg)
+![Users page for the random users API project ](./src/project-screenshot2.jpg)
+
 
 ### Technologies and tools used
 
