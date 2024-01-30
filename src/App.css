@@ -265,17 +265,12 @@ nav {
 
 .paginationBtns {
   width: 100%;
-  /* max-width: 100px; */
   height: 60px;
   list-style: none;
   display: flex;
   padding: 1rem;
-  /* align-items: center;
-  flex-wrap: wrap; */
-  /* gap: 10px; */
   justify-content: center;
   align-items: center;
-  /* width: fit-content; */
   margin: 2em auto;
   overflow: hidden;
 }
@@ -323,12 +318,6 @@ nav {
   min-height: 100vh;
   gap: 14px;
 }
-
-/* .error-page .content{
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-} */
 
 .error-page .page-not-found-text {
   background-color: #14213da4;
